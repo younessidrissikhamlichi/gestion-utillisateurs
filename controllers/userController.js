@@ -1,8 +1,9 @@
-const User = require("../models/user");
+const User = require("../models/User");
 
 // Récupérer tous les utilisateurs
 exports.getUsers = async (req, res) => {
   try {
+    // console.log(res.status.toString());
     const users = await User.find();
     res.status(200).json(users);
   } catch (err) {
